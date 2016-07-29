@@ -1,6 +1,5 @@
 ﻿using Microsoft.Owin;
 using Owin;
-
 [assembly: OwinStartupAttribute(typeof(HalpBarter.Startup))]
 namespace HalpBarter
 {
@@ -8,6 +7,7 @@ namespace HalpBarter
     {
         public void Configuration(IAppBuilder app)
         {
+            app.MapSignalR();
             ConfigureAuth(app);
         }
     }
